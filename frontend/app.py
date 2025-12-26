@@ -125,3 +125,19 @@ elif page == "Predictor":
                 st.error("Server Error. Please check backend connection.")
         except Exception as e:
             st.error(f"Connection Failed: {e}")
+
+    else:
+        # Empty State / Placeholder Dashboard
+        st.markdown("---")
+        st.subheader("📊 Live Dashboard (Ready)")
+        
+        c1, c2, c3 = st.columns(3)
+        with c1:
+            st.metric(label="🔥 Calories", value="---")
+        with c2:
+            st.metric(label="⚖️ BMI", value="---")
+        with c3:
+            st.metric(label="⚡ Intensity", value="---")
+            
+        st.info("👈 Adjust parameters in the sidebar and click **Analyze Workflow** to see your personalized results here!")
+       
